@@ -10,12 +10,13 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        HStack(alignment: .top, spacing: 0) {
+            Text(String(repeating: "Hello ", count: 30))
+                .background(Color.blue)
+                .frame(minWidth: 0, maxWidth: .infinity)
+            Text(String(repeating: "Hello ", count: 40))
+                .background(Color.red)
+                .frame(minWidth: 0, maxWidth: .infinity)
+        }.padding().background(Color.white)
     }
 }
